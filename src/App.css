@@ -1,38 +1,115 @@
-.App {
+/* Fondo general */
+body {
+  background: #f4f6f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+div {
+  color: #333;
+}
+
+/* Título */
+h1 {
   text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Menú */
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Botones del menú */
+nav button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+nav button:hover {
+  background: #2980b9;
+}
+
+/* Tarjeta de producto */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 12px auto;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Nombre del producto */
+.product-card b {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+/* Botones de editar y eliminar */
+.product-card button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-card button:nth-child(3) {
+  background: #f1c40f;
+  color: #333;
+}
+
+.product-card button:nth-child(4) {
+  background: #e74c3c;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product-card button:hover:nth-child(3) {
+  background: #d4ac0d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+product-card button:hover:nth-child(4) {
+  background: #c0392b;
+}
+
+/* Inputs */
+input {
+  width: 90%;
+  max-width: 350px;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Botón guardar */
+button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #27ae60;
 }
