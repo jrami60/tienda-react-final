@@ -16,7 +16,7 @@ export default function Formulario() {
     try {
       await addDoc(collection(db, "productos"), {
         nombre,
-        precio,
+        precio: Number(precio), // ← Se guarda como número
       });
 
       alert("Producto guardado correctamente");
@@ -32,13 +32,15 @@ export default function Formulario() {
       <h2>Agregar Producto</h2>
 
       <input
+        type="text"
         placeholder="Nombre del producto"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
       />
 
       <input
-        placeholder="Precio"
+        type="number"
+        placeholder="Precio en CLP"
         value={precio}
         onChange={(e) => setPrecio(e.target.value)}
       />

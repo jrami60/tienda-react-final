@@ -67,7 +67,15 @@ export default function ListaProductos() {
           ) : (
             <>
               <p><b>{p.nombre}</b></p>
-              <p>Precio: ${Number(p.precio || 0).toLocaleString("es-CL")} CLP</p>
+
+              <p>
+                Precio: {new Intl.NumberFormat("es-CL", {
+                  style: "currency",
+                  currency: "CLP",
+                  minimumFractionDigits: 0
+                }).format(Number(p.precio || 0))}
+              </p>
+
               <button onClick={() => activarEdicion(p)}>Editar</button>
               <button onClick={() => eliminarProducto(p.id)}>Eliminar</button>
             </>
