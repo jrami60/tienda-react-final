@@ -68,13 +68,9 @@ export default function ListaProductos() {
             <>
               <p><b>{p.nombre}</b></p>
 
+              {/* FORMATO EXACTO COMO EN EL CELULAR */}
               <p>
-                Precio: {new Intl.NumberFormat("es-CL", {
-                  style: "currency",
-                  currency: "CLP",
-                  currencyDisplay: "symbol",
-                  minimumFractionDigits: 0
-                }).format(Number(p.precio || 0))}
+                Precio: ${Number(p.precio).toLocaleString("es-CL")} CLP
               </p>
 
               <button onClick={() => activarEdicion(p)}>Editar</button>
