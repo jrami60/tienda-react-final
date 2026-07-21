@@ -36,7 +36,7 @@ export default function ListaProductos() {
   const guardarEdicion = async () => {
     await updateDoc(doc(db, "productos", editando), {
       nombre: nombreEdit,
-      precio: precioEdit,
+      precio: Number(precioEdit),
     });
 
     setEditando(null);
@@ -72,6 +72,7 @@ export default function ListaProductos() {
                 Precio: {new Intl.NumberFormat("es-CL", {
                   style: "currency",
                   currency: "CLP",
+                  currencyDisplay: "symbol",
                   minimumFractionDigits: 0
                 }).format(Number(p.precio || 0))}
               </p>
