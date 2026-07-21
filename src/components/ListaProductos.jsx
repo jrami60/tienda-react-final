@@ -68,9 +68,9 @@ export default function ListaProductos() {
             <>
               <p><b>{p.nombre}</b></p>
 
-              {/* FORMATO EXACTO COMO EN EL CELULAR */}
+              {/* FORMATO QUE FUNCIONA EN NETLIFY Y EN EL CELULAR */}
               <p>
-                Precio: ${Number(p.precio).toLocaleString("es-CL")} CLP
+                Precio: {Number(p.precio).toLocaleString("es-CL")} CLP
               </p>
 
               <button onClick={() => activarEdicion(p)}>Editar</button>
